@@ -1,0 +1,18 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * Applies a CSS transform to an element, including browser-prefixed properties.
+ * @param {?} element
+ * @param {?} transformValue
+ * @return {?}
+ */
+export function applyCssTransform(element, transformValue) {
+    /** @type {?} */
+    let value = transformValue.trim();
+    element.style.transform = value;
+    element.style.webkitTransform = value;
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwbHktdHJhbnNmb3JtLmpzIiwic291cmNlUm9vdCI6Im5nOi8vYW5ndWxhci1tZDIvIiwic291cmNlcyI6WyJsaWIvY29yZS9zdHlsZS9hcHBseS10cmFuc2Zvcm0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUtBLE1BQU0sNEJBQTRCLE9BQW9CLEVBQUUsY0FBc0I7O0lBRzVFLElBQUksS0FBSyxHQUFHLGNBQWMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUVsQyxPQUFPLENBQUMsS0FBSyxDQUFDLFNBQVMsR0FBRyxLQUFLLENBQUM7SUFDaEMsT0FBTyxDQUFDLEtBQUssQ0FBQyxlQUFlLEdBQUcsS0FBSyxDQUFDO0NBQ3ZDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBBcHBsaWVzIGEgQ1NTIHRyYW5zZm9ybSB0byBhbiBlbGVtZW50LCBpbmNsdWRpbmcgYnJvd3Nlci1wcmVmaXhlZCBwcm9wZXJ0aWVzLlxuICogQHBhcmFtIGVsZW1lbnRcbiAqIEBwYXJhbSB0cmFuc2Zvcm1WYWx1ZVxuICovXG5leHBvcnQgZnVuY3Rpb24gYXBwbHlDc3NUcmFuc2Zvcm0oZWxlbWVudDogSFRNTEVsZW1lbnQsIHRyYW5zZm9ybVZhbHVlOiBzdHJpbmcpIHtcbiAgLy8gSXQncyBpbXBvcnRhbnQgdG8gdHJpbSB0aGUgcmVzdWx0LCBiZWNhdXNlIHRoZSBicm93c2VyIHdpbGwgaWdub3JlIHRoZSBzZXQgb3BlcmF0aW9uXG4gIC8vIGlmIHRoZSBzdHJpbmcgY29udGFpbnMgb25seSB3aGl0ZXNwYWNlLlxuICBsZXQgdmFsdWUgPSB0cmFuc2Zvcm1WYWx1ZS50cmltKCk7XG5cbiAgZWxlbWVudC5zdHlsZS50cmFuc2Zvcm0gPSB2YWx1ZTtcbiAgZWxlbWVudC5zdHlsZS53ZWJraXRUcmFuc2Zvcm0gPSB2YWx1ZTtcbn1cbiJdfQ==

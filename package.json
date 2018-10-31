@@ -1,46 +1,32 @@
 {
-  "name": "md2",
-  "version": "0.0.29",
-  "description": "Angular2 based Material Design components, directives and services are Accordion, Autocomplete, Chips(Tags), Collapse, Colorpicker, Data Table, Datepicker, Dialog(Modal), Menu, Multiselect, Select, Tabs, Tags(Chips), Toast and Tooltip.",
-  "main": "./md2.umd.js",
-  "module": "./index.js",
-  "typings": "./index.d.ts",
+  "name": "angular-md2",
+  "version": "6.0.1",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/Promact/md2.git"
+    "url": "https://github.com/liuy97/md2.git"
   },
-  "keywords": [
-    "angular",
-    "material",
-    "material design",
-    "component",
-    "accordion",
-    "autocomplete",
-    "collapse",
-    "colorpicker",
-    "data-table",
-    "datepicker",
-    "dialog",
-    "modal",
-    "menu",
-    "dropdown",
-    "multiselect",
-    "select",
-    "tabs",
-    "tags",
-    "chips",
-    "toast",
-    "tooltip"
-  ],
+  "author": "liuy97",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Promact/md2/issues"
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=3.10.3"
   },
-  "homepage": "https://github.com/Promact/md2#readme",
-  "author": "Dharmesh Pipariya <pipariyadharmesh@gmail.com>",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
-    "@angular/common": "^4.0.0",
-    "@angular/http": "^4.0.0"
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/forms": "^6.0.0-rc.0 || ^6.0.0",
+    "rxjs": "^6.2.0"
+  },
+  "main": "bundles/angular-md2.umd.js",
+  "module": "fesm5/angular-md2.js",
+  "es2015": "fesm2015/angular-md2.js",
+  "esm5": "esm5/angular-md2.js",
+  "esm2015": "esm2015/angular-md2.js",
+  "fesm5": "fesm5/angular-md2.js",
+  "fesm2015": "fesm2015/angular-md2.js",
+  "typings": "angular-md2.d.ts",
+  "metadata": "angular-md2.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }
