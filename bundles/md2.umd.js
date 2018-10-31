@@ -4,10 +4,10 @@
   * License: MIT
   */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/platform-browser'), require('rxjs/Subject'), require('rxjs/add/operator/debounceTime'), require('@angular/common'), require('rxjs/Observable'), require('rxjs/Subscription'), require('rxjs/add/observable/fromEvent'), require('rxjs/add/observable/merge'), require('rxjs/add/operator/auditTime'), require('rxjs/add/operator/first'), require('rxjs/add/observable/of'), require('@angular/animations'), require('@angular/forms'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/filter')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/platform-browser', 'rxjs/Subject', 'rxjs/add/operator/debounceTime', '@angular/common', 'rxjs/Observable', 'rxjs/Subscription', 'rxjs/add/observable/fromEvent', 'rxjs/add/observable/merge', 'rxjs/add/operator/auditTime', 'rxjs/add/operator/first', 'rxjs/add/observable/of', '@angular/animations', '@angular/forms', 'rxjs/add/operator/startWith', 'rxjs/add/operator/filter'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng.md2 = global.ng.md2 || {}),global.ng.core,global.ng.platformBrowser,global.Rx,global.Rx.Observable.prototype,global.ng.common,global.Rx,global.Rx,global.Rx.Observable,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.animations,global.ng.forms));
-}(this, (function (exports,_angular_core,_angular_platformBrowser,rxjs_Subject,rxjs_add_operator_debounceTime,_angular_common,rxjs_Observable,rxjs_Subscription,rxjs_add_observable_fromEvent,rxjs_add_observable_merge,rxjs_add_operator_auditTime,rxjs_add_operator_first,rxjs_add_observable_of,_angular_animations,_angular_forms) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/platform-browser'), require('rxjs/Subject'), require('rxjs/add/operator/debounceTime'), require('@angular/common'), require('rxjs/observable/fromEvent'), require('rxjs/Observable'), require('rxjs/Subscription'), require('rxjs/add/observable/merge'), require('rxjs/add/operator/auditTime'), require('rxjs/add/observable/fromEvent'), require('rxjs/add/operator/first'), require('rxjs/add/observable/of'), require('@angular/animations'), require('@angular/forms'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/filter')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/platform-browser', 'rxjs/Subject', 'rxjs/add/operator/debounceTime', '@angular/common', 'rxjs/observable/fromEvent', 'rxjs/Observable', 'rxjs/Subscription', 'rxjs/add/observable/merge', 'rxjs/add/operator/auditTime', 'rxjs/add/observable/fromEvent', 'rxjs/add/operator/first', 'rxjs/add/observable/of', '@angular/animations', '@angular/forms', 'rxjs/add/operator/startWith', 'rxjs/add/operator/filter'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng.md2 = global.ng.md2 || {}),global.ng.core,global.ng.platformBrowser,global.Rx,global.Rx.Observable.prototype,global.ng.common,global.rxjs_observable_fromEvent,global.Rx,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.animations,global.ng.forms));
+}(this, (function (exports,_angular_core,_angular_platformBrowser,rxjs_Subject,rxjs_add_operator_debounceTime,_angular_common,rxjs_observable_fromEvent,rxjs_Observable,rxjs_Subscription,rxjs_add_observable_merge,rxjs_add_operator_auditTime,rxjs_add_observable_fromEvent,rxjs_add_operator_first,rxjs_add_observable_of,_angular_animations,_angular_forms) { 'use strict';
 
 var __decorate$3 = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -788,7 +788,7 @@ exports.ScrollDispatcher = (function () {
         this._scrolledCount++;
         if (!this._globalSubscription) {
             this._globalSubscription = this._ngZone.runOutsideAngular(function () {
-                return rxjs_Observable.Observable.merge(rxjs_Observable.Observable.fromEvent(window.document, 'scroll'), rxjs_Observable.Observable.fromEvent(window, 'resize')).subscribe(function () { return _this._notify(); });
+                return rxjs_Observable.Observable.merge(rxjs_observable_fromEvent.fromEvent(window.document, 'scroll'), rxjs_observable_fromEvent.fromEvent(window, 'resize')).subscribe(function () { return _this._notify(); });
             });
         }
         // Note that we need to do the subscribing from here, in order to be able to remove
@@ -5725,7 +5725,7 @@ exports.Md2Autocomplete = (function () {
             this._list = [];
         }
         else {
-            this._list = this._items.map(function (i) { return new Item(i, _this.textKey, _this.valueKey); }).filter(function (i) { return new RegExp(_this._inputValue, 'ig').test(i.text); });
+            this._list = this._items.map(function (i) { return new Item(i, _this.textKey, _this.valueKey); }).filter(function (i) { return new RegExp(_this._inputValue.trim(), 'ig').test(i.text); });
             if (this._list.length && this._list[0].text !== this._inputValue) {
                 this.selectedItem = null;
             }
@@ -10803,6 +10803,7 @@ exports.Md2Datepicker = (function () {
                 this.value = null;
                 this._emitChangeEvent();
             }
+            el.value = null;
         }
     };
     Md2Datepicker.prototype.coerceDateProperty = function (value) {

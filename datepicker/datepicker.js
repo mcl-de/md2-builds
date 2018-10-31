@@ -303,6 +303,7 @@ var Md2Datepicker = (function () {
                 this.value = null;
                 this._emitChangeEvent();
             }
+            el.value = null;
         }
     };
     Md2Datepicker.prototype.coerceDateProperty = function (value) {

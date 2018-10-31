@@ -312,7 +312,7 @@ var Md2Autocomplete = (function () {
             this._list = [];
         }
         else {
-            this._list = this._items.map(function (i) { return new Item(i, _this.textKey, _this.valueKey); }).filter(function (i) { return new RegExp(_this._inputValue, 'ig').test(i.text); });
+            this._list = this._items.map(function (i) { return new Item(i, _this.textKey, _this.valueKey); }).filter(function (i) { return new RegExp(_this._inputValue.trim(), 'ig').test(i.text); });
             if (this._list.length && this._list[0].text !== this._inputValue) {
                 this.selectedItem = null;
             }
